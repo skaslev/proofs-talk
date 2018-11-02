@@ -110,7 +110,7 @@ def from_s {g α} (x : S g α) : F g α :=
 diter (@F.F₁ g) x.1 (F.F₀ g x.2)
 
 def to_s {g α} (x : F g α) : S g α :=
-F.rec (λ α a, ⟨nat.zero, a⟩) (λ α a ih, ⟨nat.succ ih.1, ih.2⟩) x
+F.rec (λ α a, ⟨0, a⟩) (λ α a ih, ⟨ih.1 + 1, ih.2⟩) x
 
 def to_s_from_s {g α} (x : S g α) : to_s (from_s x) = x :=
 begin
