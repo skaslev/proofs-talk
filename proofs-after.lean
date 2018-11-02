@@ -26,9 +26,6 @@ end intro
 section fix
 
 variable fix {a : Type} : (a → a) → a
--- For example in Haskell one can define it as
---   fix :: (a -> a) -> a
---   fix f = f (fix f)
 
 def wtf : empty := fix id
 
