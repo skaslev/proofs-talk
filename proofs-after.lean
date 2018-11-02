@@ -38,10 +38,10 @@ section funext
 def foo : (λ x, 2 * x) = (λ x, x + x) :=
 begin
   funext,
-  induction x,
+  induction x with n ih,
   { refl },
   { simp [has_mul.mul, nat.mul] at *,
-    rw x_ih,
+    rw ih,
     rw nat.succ_eq_add_one,
     simp }
 end
