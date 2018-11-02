@@ -87,10 +87,10 @@ inductive sum (A B : Type)
 
 \begin{frame}[fragile]{Inductive Types: Examples}
   \begin{minted}[escapeinside=@@,mathescape=true]{Lean}
+inductive empty
+
 inductive unit
 | star : unit
-
-inductive empty
 
 inductive bool
 | ff : bool
@@ -313,7 +313,7 @@ inductive expr
   \end{minted}
 \end{frame}
 
-\begin{frame}{Example of Practical Applications: Crypto Algorithms}
+\begin{frame}{Practical Application: Crypto Algorithms}
   \begin{outline}
     \1 \textbf{HACL*}\footnotemark[5] is a formally verified cryptographic library in F*
     \1 {\em HACL} stands for High-Assurance Cryptographic Library
