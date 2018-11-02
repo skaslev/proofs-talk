@@ -202,7 +202,7 @@ def wtf : empty := sorry
 \begin{frame}[fragile]{Function extensionality}
   \begin{outline}
     \begin{minted}[escapeinside=@@,mathescape=true]{Lean}
-def funext {f1 f2 : a → b} (h : Π x, f1 x = f2 x) : f1 = f2
+def funext {f g : a → b} (h : Π x, f x = g x) : f = g
     \end{minted}
     \pause
     \1 Let's use it to prove:
