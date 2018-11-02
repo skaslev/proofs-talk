@@ -199,7 +199,19 @@ def wtf : empty := sorry
   \end{outline}
 \end{frame}
 
-%% Function extensionality
+\begin{frame}[fragile]{Function extensionality}
+  \begin{outline}
+    \begin{minted}[escapeinside=@@,mathescape=true]{Lean}
+def funext {f1 f2 : a → b} (h : Π x, f1 x = f2 x) : f1 = f2
+    \end{minted}
+    \pause
+    \1 Let's use it to prove:
+    \\~\
+    \begin{minted}[escapeinside=@@,mathescape=true]{Lean}
+def foo : (@$\lambda$@ x, 2 * x) = (@$\lambda$@ x, x + x) := sorry
+    \end{minted}
+  \end{outline}
+\end{frame}
 
 \begin{frame}[fragile]{Isomorphisms}
   \begin{minted}[escapeinside=@@,mathescape=true]{Lean}

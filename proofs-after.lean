@@ -33,6 +33,23 @@ end fix
 
 --------------------------------------------------------------------------------
 
+section funext
+
+def foo : (λ x, 2 * x) = (λ x, x + x) :=
+begin
+  funext,
+  induction x,
+  { refl },
+  { simp [has_mul.mul, nat.mul] at *,
+    rw x_ih,
+    rw nat.succ_eq_add_one,
+    simp }
+end
+
+end funext
+
+--------------------------------------------------------------------------------
+
 structure {u v} iso (α : Type u) (β : Type v) :=
 (f : α → β) (g : β → α) (gf : Π x, g (f x) = x) (fg : Π x, f (g x) = x)
 
@@ -54,6 +71,11 @@ def iscontr (α : Type) := Σ' x : α, Π y : α, x = y
 
 structure eqv (α β : Type) :=
 (f : α → β) (h : Π y : β, iscontr (fiber f y))
+
+--------------------------------------------------------------------------------
+
+def ran (g h : Type → Type) (α : Type) := Π β, (α → g β) → h β
+def lan (g h : Type → Type) (α : Type) := Σ β, (g β → α) × h β
 
 --------------------------------------------------------------------------------
 
