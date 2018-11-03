@@ -11,7 +11,7 @@ def modus_tollens (h : b → empty) (f : a → b) : a → empty :=
 h ∘ f
 
 def ex_falso_quodlibet (x : empty) : a :=
-empty.rec (λ y, a) x
+x.rec _
 
 def eagle (x₁ : a → d → c) (x₂ : a) (x₃ : b → e → d) (x₄ : b) (x₅ : e) : c :=
 x₁ x₂ (x₃ x₄ x₅)
