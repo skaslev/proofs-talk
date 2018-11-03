@@ -65,8 +65,8 @@
 
 \begin{frame}{Types: The Shape of Data}
   \begin{outline}
-    \1 Roughly speaking, types are a specification of their possible values
-    \1 In typed programming languages each valid expression $a$ has some type $A$ which we denote as $a : A$
+    \1 Types describe the space of their possible values
+    \1 In typed programming languages each valid expression $a$ has a type $A$, which we denote as $a : A$
     \1 We can combine types to form new types, for example given two types $A$ and $B$, we can create the types:
     \2 $A \to B$, the type of functions from $A$ to $B$
     \2 $A \oplus B$, disjoint union of $A$ and $B$
@@ -172,7 +172,7 @@ def batman : (((a → empty) → empty) → empty) → (a → empty) := sorry
   \end{outline}
 \end{frame}
 
-\begin{frame}{Principle of Explosion}
+\begin{frame}{xkcd \#704: Principle of Explosion}
   \begin{center}
     \includegraphics[scale=0.48]{images/principle_of_explosion}
   \end{center}

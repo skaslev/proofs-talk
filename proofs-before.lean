@@ -4,35 +4,32 @@ section intro
 
 variables {a b c d e : Type}
 
-def modus_ponens : a → (a → b) → b := sorry
+def modus_ponens : a → (a → b) → b :=
+sorry
 
-def modus_tollens : (b → empty) → (a → b) → (a → empty) := sorry
+def modus_tollens : (b → empty) → (a → b) → (a → empty) :=
+sorry
 
-def ex_falso_quodlibet : empty → a := sorry
+def ex_falso_quodlibet : empty → a :=
+sorry
 
-def eagle : (a → d → c) → a → (b → e → d) → b → e → c := sorry
+def eagle : (a → d → c) → a → (b → e → d) → b → e → c :=
+sorry
 
-def batman : (((a → empty) → empty) → empty) → (a → empty) := sorry
+def batman : (((a → empty) → empty) → empty) → (a → empty) :=
+sorry
 
 end intro
 
 --------------------------------------------------------------------------------
 
-section fix
-
-variable fix {a : Type} : (a → a) → a
-
-def wtf : empty := sorry
-
-end fix
+def wtf : (Π α, (α → α) → α) → empty :=
+sorry
 
 --------------------------------------------------------------------------------
 
-section funext
-
-def foo : (λ x, 2 * x) = (λ x, x + x) := sorry
-
-end funext
+def foo : (λ x, 2 * x) = (λ x, x + x) :=
+sorry
 
 --------------------------------------------------------------------------------
 
@@ -41,9 +38,11 @@ structure {u v} iso (α : Type u) (β : Type v) :=
 
 namespace iso
 
-def inv {α β} (i : iso α β) : iso β α := sorry
+def inv {α β} (i : iso α β) : iso β α :=
+sorry
 
-def comp {α β γ} (i : iso α β) (j : iso β γ) : iso α γ := sorry
+def comp {α β γ} (i : iso α β) (j : iso β γ) : iso α γ :=
+sorry
 
 end iso
 
