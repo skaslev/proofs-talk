@@ -112,7 +112,7 @@ inductive bin_tree (T : Type)
 inductive rose_tree (T : Type)
 | node (a : T) (children : list rose_tree) : rose_tree
 
-structure rose_tree (T : Type)
+structure rose_tree (T : Type) :=
 (a : T) (children : list (rose_tree T))
   \end{minted}
 \end{frame}
