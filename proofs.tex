@@ -250,10 +250,12 @@ inductive F (g : Type → Type) : Type → Type 1
 | F0 : Π {a}, a → F a
 | F1 : Π {a}, F (g a) → F a
 
+-- `F G` is a general balanced tree (arbitrary branching at each node)
 inductive G (a : Type) : Type
 | G0 : a → G
 | G1 : a → G → G
 
+-- `F G23` is balanced 2-3-tree
 inductive G23 (a : Type) : Type
 | G2 : a → a → G23
 | G3 : a → a → a → G23
